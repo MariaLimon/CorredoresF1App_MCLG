@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CorredoresF1App_MCLG.View.CorredorPage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Frame BackgroundColor="Beige">
+                <Label Text="Registrar Corredores" FontSize="35" HorizontalOptions="Center"/>
+            </Frame>
+            <StackLayout  Margin="20">
+                <Label Text="Nombre" FontSize="Title" />
+                <Entry Text="{Binding Nombre}" Placeholder="Nombre del corredor" />
+
+                <Label Text="Numero" FontSize="Title" />
+                <Entry Text="{Binding Numero}" Placeholder="Numero del corredor" Keyboard="Numeric"/>
+
+                <Label Text="Equipo" FontSize="Title" />
+                <Entry Text="{Binding Equipo}" Placeholder="Nombre del equpo del corredor" />
+
+                <Button Text="Registrar" Command="{Binding InsertarCorredor}"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
